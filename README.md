@@ -58,7 +58,7 @@ mysql -u root -p mmams < sql/schema.sql && \
 mysql -u root -p mmams < sql/insert_data.sql && \
 mysql -u root -p mmams < sql/queries.sql
 ```
- 
+
 > ⚠️ Run `schema.sql` first — it creates the database and tables.
 > `insert_data.sql` and `queries.sql` depend on it.
 

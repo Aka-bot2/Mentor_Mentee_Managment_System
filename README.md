@@ -24,18 +24,48 @@ mentoring. This system solves that using a relational database.
 ![ER Diagram](diagrams/er_diagram.png)
 
 ## 🚀 How to Run
-1. Open MySQL
-2. Run schema first:
-   `source sql/schema.sql`
-3. Insert sample data:
-   `source sql/insert_data.sql`
-4. Run queries:
-   `source sql/queries.sql`
+ 
+### Option 1 — Inside MySQL (interactive)
+```sql
+source sql/schema.sql
+source sql/insert_data.sql
+source sql/queries.sql
+```
+ 
+### Option 2 — Using the Command Line (CLI)
+ 
+**Step 1: Clone the repository**
+```bash
+git clone https://github.com/your-username/mentor-mentee-dbms.git
+cd mentor-mentee-dbms
+```
+ 
+**Step 2: Log into MySQL**
+```bash
+mysql -u root -p
+```
+ 
+**Step 3: Run the files one by one**
+```bash
+mysql -u root -p < sql/schema.sql
+mysql -u root -p < sql/insert_data.sql
+mysql -u root -p < sql/queries.sql
+```
+ 
+**Or run all 3 in one command:**
+```bash
+mysql -u root -p mmams < sql/schema.sql && \
+mysql -u root -p mmams < sql/insert_data.sql && \
+mysql -u root -p mmams < sql/queries.sql
+```
+ 
+> ⚠️ Run `schema.sql` first — it creates the database and tables.
+> `insert_data.sql` and `queries.sql` depend on it.
 
 ## 🛠️ Tools Used
 - MySQL
 - Draw.io (ER Diagrams)
 
 **Contributors**
-  - Akashh (https://github.com/Aka-bot2)
-  - Chetan (https://github.com/Chetan-37)
+  - Akashh [@Aka-bot2](https://github.com/Aka-bot2)
+  - Chetan [@Chetan-37](https://github.com/Chetan-37)
